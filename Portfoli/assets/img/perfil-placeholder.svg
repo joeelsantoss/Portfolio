@@ -1,0 +1,10 @@
+<svg width="720" height="900" viewBox="0 0 720 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="900" rx="48" fill="#F3E9DE"/>
+  <rect x="48" y="48" width="624" height="804" rx="36" fill="#FFF8F1"/>
+  <circle cx="360" cy="305" r="128" fill="#F0C9B2"/>
+  <path d="M202 702C202 588 273 524 360 524C447 524 518 588 518 702V740H202V702Z" fill="#D96C3F" opacity="0.9"/>
+  <circle cx="360" cy="284" r="86" fill="#1D1D1B" opacity="0.1"/>
+  <path d="M270 312C292 255 334 222 391 222C448 222 487 257 505 312C481 272 440 250 390 250C339 250 296 272 270 312Z" fill="#1D1D1B" opacity="0.14"/>
+  <rect x="214" y="772" width="292" height="24" rx="12" fill="#4890A0" opacity="0.3"/>
+  <text x="360" y="816" text-anchor="middle" fill="#7C6C5F" font-family="Arial, sans-serif" font-size="26" font-weight="700">Sustituye esta imagen por tu foto</text>
+</svg>
