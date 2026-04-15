@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invirtiendo Cadenas</title>
+</head>
+<body>
+    <!-- 
+  /*
+ /*
+ * Crea un programa que invierta el orden de una cadena de texto
+ * sin usar funciones propias del lenguaje que lo hagan de forma automática.
+ * - Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
+ */-->
+
+    <h1>Invirtiendo Cadenas</h1>
+    <script>
+        function invertirCadena(cadena) {
+            let cadenaInvertida = "";
+            for (let i = cadena.length - 1; i >= 0; i--) {
+                cadenaInvertida += cadena[i];
+            }
+            return cadenaInvertida;
+        }
+        
+        document.write(invertirCadena("Hola mundo"));  
+        
+    </script>
+</body>
+</html>

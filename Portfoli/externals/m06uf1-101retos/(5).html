@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area de un poligono</title>
+</head>
+
+<body>
+  <!-- 
+  * Crea una única función (importante que sólo sea una) que sea capaz
+  * de calcular y retornar el área de un polígono.
+  * - La función recibirá por parámetro sólo UN polígono a la vez.
+  * - Los polígonos soportados serán Triángulo, Cuadrado y Rectángulo.
+  * - Imprime el cálculo del área de un polígono de cada tipo.-->
+
+  <script>
+
+function areaTriangle(base, altura) {
+      return (base * altura) / 2;
+    }
+
+    function areaRectangle(largo, alto) {
+      return (largo * alto);
+    }
+
+    function areaCuadrado(lado) {
+      return lado * lado;
+    }
+
+    function calcularArea(polygonType, ...params) {
+      switch (polygonType) {
+
+        case "triangulo":
+          document.write(`El área del triángulo es ${areaTriangle(...params)}<br>`);
+          break;
+
+        case "rectangulo":
+          document.write(`El área del rectángulo es ${areaRectangle(...params)}<br>`);
+          break;
+
+        case "cuadrado":
+          document.write(`El área del cuadrado es ${areaCuadrado(...params)}<br>`);
+          break;
+
+        default:
+          document.write("Polígono no soportado.<br>");
+          break;
+      }
+    }
+
+    calcularArea("triangulo", 10, 20);   
+    calcularArea("rectangulo", 10, 20);  
+    calcularArea("cuadrado", 10);       
+  </script>
+</body>
+
+</html>
