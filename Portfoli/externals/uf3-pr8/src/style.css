@@ -1,0 +1,173 @@
+* {
+  margin:  0;
+  padding: 0;
+  box-sizing:  border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background:  #0004ff5a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-box {
+  background: white;
+  padding: 35px;
+  border-radius:  8px;
+  box-shadow:  0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  color: #4285f4;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 20px;
+  margin-bottom:  25px;
+  font-weight: normal;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border-color: #4285f4;
+}
+
+.requirements {
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius:  5px;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.requirement {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.requirement .icon {
+  width: 16px;
+  height: 16px;
+  border-radius:  50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.requirement.invalid .icon {
+  background: #ff4444;
+  color: white;
+}
+
+.requirement.invalid .text {
+  color: #666;
+}
+
+.requirement.valid .icon {
+  background: #34a853;
+  color:  white;
+}
+
+.requirement.valid .text {
+  color: #34a853;
+  font-weight: 500;
+}
+
+button {
+  width:  100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#submitBtn {
+  background: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+#submitBtn:not(:disabled) {
+  background: #4285f4;
+  color: white;
+  cursor: pointer;
+}
+
+#submitBtn:not(:disabled):hover {
+  background: #357ae8;
+}
+
+.separator {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.google-btn {
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.google-btn:hover {
+  background: #f5f5f5;
+}
+
+.google-btn img {
+  width:  18px;
+  height:  18px;
+}
+
+.signup {
+  text-align:  center;
+  font-size:  13px;
+  color:  #666;
+}
+
+.signup a {
+  color: #4285f4;
+  text-decoration:  none;
+  font-weight:  500;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}

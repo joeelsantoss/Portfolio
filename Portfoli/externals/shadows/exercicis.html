@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cajas con Sombras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+<style>
+  body {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: white;
+  }
+
+  /* 1. Sombra dura desplazada */
+  .b1 { box-shadow: 5px 5px 0 red; }
+
+  /* 2. Sombra difuminada */
+  .b2 { box-shadow: 5px 5px 10px red; }
+
+  /* 3. Borde grueso rojo */
+  .b3 { border: 4px solid red; }
+
+  /* 4. Sombra interior suave */
+  .b4 { box-shadow: inset 0 0 8px red; }
+
+  /* 5. Brillo interno intenso */
+  .b5 { box-shadow: inset 0 0 30px red; }
+
+  /* 6. Sombra de múltiples capas (desplazada varias veces) */
+  .b6 {
+    box-shadow:
+      -4px 4px 0 rgba(255,0,0,0.3),
+      -8px 8px 0 rgba(255,0,0,0.2),
+      -12px 12px 0 rgba(255,0,0,0.1);
+  }
+
+  /* 7. Doble borde */
+  .b7 {
+    border: 2px solid red;
+    background-color: #fff;
+    position: relative;
+  }
+  .b7::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: -8px;
+    bottom: -8px;
+    border: 2px solid red;
+    border-radius: 10px;
+  }
+
+  /* 8. Borde multicolor */
+  .b8 {
+    box-shadow:
+      0 0 0 4px blue,
+      0 0 0 8px green,
+      0 0 0 12px yellow,
+      0 0 0 16px red;
+  }
+
+  /* 9. Efecto escalonado multicolor */
+  .b9 {
+    box-shadow:
+      5px 5px 0 red,
+      10px 10px 0 orange,
+      15px 15px 0 yellow,
+      20px 20px 0 green,
+      25px 25px 0 blue;
+  }
+
+
+  h1 {
+    grid-column: span 3;
+    text-align: center;
+    font-family: 'Playwrite DE SAS', sans-serif;
+    color: #333;
+
+    text-shadow: #ec3434 2px -10px 4px;
+  }
+
+
+
+
+</style>
+</head>
+<body>
+  <div class="box b1"></div>
+  <div class="box b2"></div>
+  <div class="box b3"></div>
+  <div class="box b4"></div>
+  <div class="box b5"></div>
+  <div class="box b6"></div>
+  <div class="box b7"></div>
+  <div class="box b8"></div>
+  <div class="box b9"></div>
+
+<h1>Hola Mundo</h1>
+  
+</body>
+</html>

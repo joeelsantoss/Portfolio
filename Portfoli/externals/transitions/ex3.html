@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 3</title>
+    <style>
+        .cuadrado {
+            display: flex;
+            margin: auto;
+            margin-top: 20mm;
+            width: 50mm;
+            height: 50mm;
+            background: linear-gradient(180deg, rgb(237, 243, 51), rgb(255, 254, 254));
+            box-shadow: 4mm 4mm 4mm rgb(171, 175, 67);
+            border-radius: 3mm;
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .cuadrado img {
+            width: 80%;
+            height: 80%;
+            border-radius: 3mm;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img:hover {
+            transform: scale(1.5);
+            transition: transform 0.5s;
+            translate: 0mm -2mm;
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado">
+        <img src="img/padel.png" alt="Padel">
+    </div>
+</body>
+</html>

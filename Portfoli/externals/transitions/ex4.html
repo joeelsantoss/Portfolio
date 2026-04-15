@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 4</title>
+    <style>
+        .q1 {
+            display: flex;
+            margin: auto;
+            margin-top: 30vh;
+            width: 50mm;
+            height: 50mm;
+            background-color: rgb(232, 97, 104);
+            justify-content: center;
+            align-items: center;
+            transition: transform 5s;
+
+        }
+
+        .q2 {
+            display: flex;
+            width: 37.5mm;
+            height: 37.5mm;
+            background-color: rgb(30, 126, 32);
+            transition: transform 5s;
+            justify-content: center;
+        }
+
+        .q3 {
+            margin: auto;
+            width: 25mm;
+            height: 25mm;
+            background-color: rgb(43, 55, 165);
+            transition: transform 5s;
+        }
+
+        .q1:hover {
+            transform: rotate(100deg);
+        }
+
+        .q1:hover .q2 {
+            transform: rotate(250deg);
+        }
+
+        .q1:hover .q3 {
+            transform: rotate(400deg);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="q1">
+        <div class="q2">
+            <div class="q3">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body {
+    background: #e83cb7;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.container {
+    padding: 5mm 10mm 10mm 10mm;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: 95vh;
+    width: 95vw;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 2mm;
+}
+
+.logo {
+    font-size: 8mm;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li {
+    margin-right: 20px;
+    font-size: 5mm;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+}
+
+.menu a:hover {
+    color: #e83cb7;
+}
+
+.buttons-menu {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 5mm;
+}
+
+.carrito, .login {
+    border: 1px solid #222;
+    background: #ffffff;
+    padding: 1.5mm;
+}
+
+
+.carrito:hover, .login:hover {
+    background: #e83cb7;
+    color: #fff;
+    border: 1px solid #e83cb7;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    font-size: 9mm;
+    margin-top: 2mm;
+    padding: 5mm;
+    width: 100%;
+    line-height: 1.2;
+    display: block; /* Elimina flex para centrar el texto */
+}
+
+
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 350mm;
+    height: 100mm;
+    gap: 1mm;
+}
+
+.imagenes > div {
+    width: 45mm;
+    height: 100mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2mm;
+    border-radius: 3mm ;
+}
+
+.imagenes > div > div {
+    border-radius: 3mm;
+}
+
+.primero > div , .quinto > div {
+    width: 45mm;
+    height: 30mm;
+    background-image: url(imagenes/bamba2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.segundo > div, .cuarto > div {
+    width: 45mm;
+    height: 35mm;
+    background-image: url(imagenes/bamba3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.segundo > div:last-child, .cuarto > div:last-child {
+    width: 45mm;
+    height: 45mm;
+}
+
+.tercero {
+    width: 45mm;
+    height: 40mm;
+    background-image: url(imagenes/centro.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    text-align: center;
+    padding: 5mm;
+}
+
+footer button {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 5mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40mm;
+    height: 10mm;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5mm;
+    padding: 5mm;
+
+
+
+
+}

@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url(dark_wavy_shape_background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgba(77, 70, 70, 0.36);
+    backdrop-filter: blur(8px); /* Correcció*/
+    border: 2px solid #fff;   /* Correcció*/
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.466);
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffffd7;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: #ffffffd7;
+    width: 100%;
+    text-align: left;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-icon {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon input {
+    width: 100%;
+    padding: 10px 36px 10px 12px;
+    border: none;
+    border-bottom: 2px solid #bbb;
+    background: rgba(255,255,255,0.8);
+    font-size: 16px;
+    outline: none;
+    color: #222;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.input-icon input:focus {
+    border-bottom: 2px solid #ff0000;
+}
+
+.input-icon i {
+    position: absolute;
+    right: 12px;
+    color: #e8322ccc;
+    font-size: 18px;
+}
+
+.checkbox-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 0.7rem;
+    background: #ffffffd7;
+    color: #312e2e;
+    border: none;
+    border-radius: 24px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-bottom: 12px;
+}
+
+.login-container button:hover {
+    background: #00000082;
+    color: #fff;
+}
+
+.login-container a {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
