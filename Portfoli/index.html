@@ -12,25 +12,77 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!--
+        GUIA RAPIDA BOOTSTRAP (PORTFOLIO)
+        - container: centra el contenido y limita el ancho maximo.
+        - row: crea una fila del grid.
+        - Breakpoints en columnas (mobile-first):
+          col-12 = en movil ocupa 12/12 (ancho completo).
+          col-md-6 = desde md (>=768px) ocupa 6/12 (2 columnas por fila).
+          col-lg-4 = desde lg (>=992px) ocupa 4/12 (3 columnas por fila).
+          col-xl-3 = desde xl (>=1200px) ocupa 3/12 (4 columnas por fila).
+          Bootstrap aplica primero lo pequeno y, al crecer pantalla, sobrescribe con md -> lg -> xl.
+        - g-* (ej: g-4): gap entre columnas/filas del grid.
+        - p* / m* (ej: p-4, py-5, mb-3): utilidades de espaciado (padding/margin).
+        - d-flex: activa flexbox; align-items-* alinea en eje vertical; justify-content-* reparte en horizontal.
+        - navbar, navbar-expand-lg, navbar-toggler, navbar-collapse: estructura responsive de navegacion.
+        - navbar-nav, nav-item, nav-link, active: lista de enlaces de menu y estado activo.
+        - dropdown, dropdown-toggle, dropdown-menu, dropdown-item: menu desplegable.
+        - ms-auto / ms-lg-3: margin-start (izquierda en LTR), util para empujar elementos.
+        - form-check, form-switch, form-check-input: estilos de checkbox/switch Bootstrap.
+        - text-body-secondary: color de texto secundario del tema.
+        - h2/h4/h5 como clase: cambia tamano visual del texto sin cambiar semantica del tag.
+        - card, card-body, card-img-top, h-100: estructura de tarjetas (muy usado en paginas UF).
+        - btn: boton base Bootstrap (combinado aqui con clase personalizada btn-accent).
+    -->
     <div class="app-shell">
+        <!-- NAVBAR PRINCIPAL -->
+        <!-- navbar: aplica estilos base de barra de navegacion de Bootstrap -->
+        <!-- navbar-expand-lg: menu colapsado en movil y expandido desde >= lg -->
+        <!-- sticky-top: deja la navbar fija arriba al hacer scroll -->
         <nav class="navbar navbar-expand-lg sticky-top navbar-glass">
+            <!-- container: centra y limita el ancho maximo del contenido -->
+            <!-- py-2: padding vertical pequeno -->
             <div class="container py-2">
+                <!-- navbar-brand: bloque de marca/logo -->
+                <!-- d-flex: activa flexbox -->
+                <!-- align-items-center: centra verticalmente items dentro del flex -->
+                <!-- gap-3: separacion entre items hijos -->
                 <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
                     <span class="brand-mark">JS</span>
                     <span>
+                        <!-- d-block: convierte span en bloque para forzar salto de linea -->
+                        <!-- fw-bold: font-weight 700 -->
                         <span class="brand-title d-block fw-bold">Joel Santos</span>
+                        <!-- text-body-secondary: color de texto secundario del tema Bootstrap -->
                         <small class="text-body-secondary">Programador Web</small>
                     </span>
                 </a>
+                <!-- navbar-toggler: boton hamburguesa para abrir/cerrar menu movil -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Abrir menu">
+                    <!-- navbar-toggler-icon: icono hamburguesa generado por Bootstrap -->
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- collapse: contenedor colapsable -->
+                <!-- navbar-collapse: adapta el bloque colapsable al comportamiento de navbar -->
                 <div class="collapse navbar-collapse" id="mainNavbar">
+                    <!-- navbar-nav: estilos para lista de enlaces en navbar -->
+                    <!-- ms-auto: margin-start auto (empuja el menu hacia la derecha) -->
+                    <!-- align-items-lg-center: alinea items al centro desde lg -->
+                    <!-- gap-lg-2: separacion horizontal entre items desde lg -->
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <!-- nav-item: item de navegacion -->
+                        <!-- nav-link: estilo de enlace de navbar -->
+                        <!-- active: marca visualmente la pagina actual -->
                         <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <!-- dropdown: activa estructura de menu desplegable -->
                         <li class="nav-item dropdown">
+                            <!-- dropdown-toggle: enlace que abre el desplegable -->
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">M06</a>
+                            <!-- dropdown-menu: contenedor del menu desplegable -->
+                            <!-- dropdown-menu-end: alinea el menu a la derecha del trigger -->
                             <ul class="dropdown-menu dropdown-menu-end">
+                                <!-- dropdown-item: estilo de cada opcion del desplegable -->
                                 <li><a class="dropdown-item" href="m06-uf1.html">UF1</a></li>
                                 <li><a class="dropdown-item" href="m06-uf2.html">UF2</a></li>
                                 <li><a class="dropdown-item" href="m06-uf3.html">UF3</a></li>
@@ -44,8 +96,15 @@
                                 <li><a class="dropdown-item" href="m09-uf2.html">UF2</a></li>
                             </ul>
                         </li>
+                        <!-- ms-lg-3: margen a la izquierda desde lg (separa el switch del menu) -->
                         <li class="nav-item ms-lg-3">
+                            <!-- form-check + form-switch: convierte un checkbox en interruptor -->
+                            <!-- d-flex: distribuye input y label en linea -->
+                            <!-- align-items-center: centra verticalmente -->
+                            <!-- gap-2: espacio entre input y label -->
+                            <!-- mb-0: elimina margen inferior -->
                             <div class="form-check form-switch d-flex align-items-center gap-2 mb-0">
+                                <!-- form-check-input: estilo Bootstrap para input de formulario -->
                                 <input class="form-check-input" type="checkbox" role="switch" id="themeSwitchHome" data-theme-switch>
                                 <label class="theme-switch-label" for="themeSwitchHome" data-theme-label>Modo claro</label>
                             </div>
@@ -55,20 +114,39 @@
             </div>
         </nav>
 
+        <!-- container: ancho responsive centrado -->
+        <!-- py-4: padding vertical medio -->
+        <!-- py-lg-5: padding vertical mayor en pantallas lg -->
         <main class="container py-4 py-lg-5">
+            <!-- mb-5: margen inferior grande entre secciones -->
             <section class="mb-5" id="presentacion">
                 <div class="section-surface">
+                    <!-- row: fila del grid de Bootstrap -->
+                    <!-- align-items-center: centra columnas verticalmente -->
+                    <!-- g-4 / g-lg-5: separacion entre columnas/filas (gap) -->
                     <div class="row align-items-center g-4 g-lg-5">
+                        <!-- col-12: 12/12 en movil -->
+                        <!-- col-lg-4: 4/12 en pantallas lg -->
+                        <!-- text-center: centra el texto -->
                         <div class="col-12 col-lg-4 text-center">
+                            <!-- mx-auto: margenes horizontales automaticos para centrar bloque -->
                             <div class="profile-photo-wrap mx-auto">
-                                <img class="profile-photo img-fluid" src="assets/img/Joel.png" alt="Foto de perfil de Joel Santos">
+                                <!-- img-fluid: hace la imagen responsive (max-width:100%; height:auto) -->
+                                <img class="profile-photo img-fluid" src="assets/img/Joel.png" alt="Foto de perfil">
                             </div>
                         </div>
+                        <!-- col-12: ancho completo en movil -->
+                        <!-- col-lg-8: ocupa 8/12 en lg -->
                         <div class="col-12 col-lg-8">
+                            <!-- mb-3: margen inferior -->
                             <span class="eyebrow mb-3">Presentacion</span>
+                            <!-- h2: tamano visual de heading de nivel h2 (aunque sea un h1 real) -->
+                            <!-- mb-3: margen inferior -->
                             <h1 class="page-title h2 mb-3">Joel Santos</h1>
                             <div class="simple-copy">
+                                <!-- mb-3: separa este parrafo del siguiente -->
                                 <p class="page-copy mb-3">Soy alumno de segundo curso de DAW y estoy orientado al desarrollo web. En este portfolio recojo una seleccion de practicas realizadas en los modulos M06 y M09, con trabajos centrados en maquetacion, interactividad en cliente y estructura de proyectos.</p>
+                                <!-- mb-0: elimina margen inferior en el ultimo parrafo -->
                                 <p class="page-copy mb-0">Me interesa trabajar con interfaces claras, codigo ordenado y soluciones responsive que mantengan una presentacion limpia tanto a nivel visual como tecnico.</p>
                             </div>
                         </div>
@@ -86,7 +164,11 @@
                             <article class="skill-row">
                                 <span class="skill-row-code">01</span>
                                 <div>
+                                    <!-- h5: estilo visual de encabezado h5 -->
+                                    <!-- mb-1: margen inferior pequeno -->
                                     <h3 class="h5 mb-1">HTML y CSS</h3>
+                                    <!-- text-body-secondary: tono secundario -->
+                                    <!-- mb-0: sin margen inferior -->
                                     <p class="text-body-secondary mb-0">Estructura semantica, maquetacion responsive y organizacion visual.</p>
                                 </div>
                             </article>
@@ -137,10 +219,17 @@
                     <span class="eyebrow mb-3">Intereses</span>
                     <h2 class="section-title mb-3">Aficiones personales</h2>
                     <p class="section-copy mb-4">Aspectos personales que forman parte de mi rutina y de mi forma de trabajar.</p>
+                    <!-- row: fila de grid -->
+                    <!-- g-4: separacion entre tarjetas -->
                     <div class="row g-4">
+                        <!-- col-12: 1 columna en movil -->
+                        <!-- col-md-6: 2 columnas desde md -->
+                        <!-- col-lg-4: 3 columnas desde lg -->
                         <div class="col-12 col-md-6 col-lg-4">
+                            <!-- p-4: padding interno grande -->
                             <article class="info-card hobby-card p-4">
                                 <div class="hobby-icon mb-3">FIT</div>
+                                <!-- h4: tamano visual de heading h4 -->
                                 <h3 class="h4">Deporte</h3>
                                 <p class="text-body-secondary mb-0">Practico gimnasio y running para mantener una rutina activa y constante.</p>
                             </article>
@@ -165,6 +254,11 @@
         </main>
 
         <footer class="footer-note py-4">
+            <!-- d-flex: layout flex -->
+            <!-- flex-column: elementos apilados en movil -->
+            <!-- flex-md-row: en md pasan a fila -->
+            <!-- justify-content-between: separa extremos horizontalmente -->
+            <!-- gap-2: espacio cuando estan en columna -->
             <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
                 <span>&copy; 2026 Joel Santos.</span>
             </div>

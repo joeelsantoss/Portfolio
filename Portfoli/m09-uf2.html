@@ -11,6 +11,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!--
+        GUIA RAPIDA BOOTSTRAP (PAGINA UF/VISOR)
+        - container: centra el contenido y limita el ancho maximo.
+        - row + col-*: sistema de grid responsive por breakpoints (md, lg, xl).
+        - g-* (ej: g-4): separacion entre tarjetas/columnas.
+        - p* / m* (ej: p-4, py-5, mb-3): utilidades de espaciado rapido.
+        - navbar* + collapse + navbar-toggler: menu responsive con hamburguesa en movil.
+        - dropdown*: menu desplegable para navegar entre modulos UF.
+        - d-flex + align-items-* + justify-content-* + flex-wrap: layout flexible.
+        - card + card-img-top + card-body + h-100: tarjeta completa con imagen y cuerpo.
+        - btn: boton Bootstrap base (aqui se personaliza con btn-accent/btn-soft).
+        - text-body-secondary: texto de apoyo con color secundario del tema.
+        - form-switch + form-check-input: interruptor para cambiar tema claro/oscuro.
+        - clases con breakpoint (col-md-6, text-lg-end, p-lg-4): cambian estilo segun ancho de pantalla.
+    -->
     <div class="app-shell">
         <nav class="navbar navbar-expand-lg sticky-top navbar-glass"><div class="container py-2"><a class="navbar-brand d-flex align-items-center gap-3" href="index.html"><span class="brand-mark">JS</span><span><span class="brand-title d-block fw-bold">Joel Santos</span><small class="text-body-secondary">M09 | UF2</small></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navM09Uf2"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navM09Uf2"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">M06</a><ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="m06-uf1.html">UF1</a></li><li><a class="dropdown-item" href="m06-uf2.html">UF2</a></li><li><a class="dropdown-item" href="m06-uf3.html">UF3</a></li><li><a class="dropdown-item" href="m06-uf4.html">UF4</a></li></ul></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">M09</a><ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="m09-uf1.html">UF1</a></li><li><a class="dropdown-item active" href="m09-uf2.html">UF2</a></li></ul></li><li class="nav-item ms-lg-3"><div class="form-check form-switch d-flex align-items-center gap-2 mb-0"><input class="form-check-input" type="checkbox" id="themeSwitchM09Uf2" data-theme-switch><label class="theme-switch-label" for="themeSwitchM09Uf2" data-theme-label>Modo claro</label></div></li></ul></div></div></nav>
 
